@@ -25,10 +25,8 @@ export class AddImageComponent implements OnInit {
     this.ApiServicioComponent.getImagenes().subscribe(
       (res: any) => {
         this.posts = res;
-
         this.datosFiltradosOriginal = [];
-        res.forEach((val:any) => this.datosFiltradosOriginal.push(Object.assign({}, val)));
-        console.log(this.posts)
+        res.forEach((val:any) => this.datosFiltradosOriginal.push(Object.assign({}, val)));    
       },
       (error: any) => {
         console.log(error)
@@ -38,7 +36,7 @@ export class AddImageComponent implements OnInit {
 
   }
 
-  llenaZona(){
+  llenaSeleccion(){
 		if(this.headerGroup.controls.name.value != undefined){
 			const seleccion = this.posts.filter((posts:any) => posts.name == this.headerGroup.controls.name.value);
 			if(seleccion.length > 0){

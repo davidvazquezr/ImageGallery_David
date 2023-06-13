@@ -3,8 +3,8 @@
     <div class="col-sm-12 col-md-6 col-lg-6" >
         <div class="input-group prefix">
             <span>Personaje:  &nbsp;</span>        
-            <input type="text" id="economicoUnidad" formControlName="name" list="dataListOptions" class="inputFullWide"
-            (change)="llenaZona()" aria-describedby="economicoUnidad" placeholder="Nombre" onlyNumber required>
+            <input type="text" id="personaje" formControlName="name" list="dataListOptions" class="inputFullWide"
+            (change)="llenaSeleccion()" aria-describedby="personaje" placeholder="Ingresa un nombre" required>
             <datalist id="dataListOptions" style="height:50px;">
                 <option *ngFor="let post of posts" [value]="post.name"></option>
             </datalist>
