@@ -26,6 +26,7 @@ export class ImageGalleryComponent implements OnInit{
   
   addImage($event: never[]) {
     this.array_nuevo = $event;
+    console.log(this.array_nuevo[0])
     this.array_base.push(this.array_nuevo[0])   
   }
 }

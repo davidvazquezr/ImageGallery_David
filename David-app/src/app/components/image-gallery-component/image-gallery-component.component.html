@@ -4,6 +4,7 @@
 <div class="row">       
     <div  class="col-sm-8" >
     <dx-data-grid id="gridContainer" [dataSource]="array_base" keyExpr="id" [showBorders]="true">
+        <dxo-paging [pageSize]="3"> </dxo-paging>
         <dxo-editing mode="popup" [allowUpdating]="true" [useIcons]="true">
             <dxo-popup title="Detalle" [showTitle]="true" [width]="700" [height]="525">
             </dxo-popup>
@@ -12,7 +13,18 @@
                     <dxi-item dataField="name"></dxi-item>
                     <dxi-item dataField="species"></dxi-item>
                     <dxi-item dataField="image" ></dxi-item>
-                
+                    <dxi-item dataField="class"></dxi-item>
+                    <dxi-item dataField="creator"></dxi-item>
+                    <dxi-item dataField="dateCreated" ></dxi-item>
+                    <dxi-item dataField="dateDestroyed"></dxi-item>
+                    <dxi-item dataField="destroyedLocation"></dxi-item>
+                    <dxi-item dataField="equipment" ></dxi-item>
+                    <dxi-item dataField="eyeColor"></dxi-item>
+                    <dxi-item dataField="platingColor"></dxi-item>
+                    <dxi-item dataField="sensorColor" ></dxi-item>
+                    <dxi-item dataField="skinColor"></dxi-item>
+                    <dxi-item dataField="species"></dxi-item>
+                    <dxi-item dataField="wiki" ></dxi-item>
                 </dxi-item>
             </dxo-form>
         </dxo-editing>
@@ -20,6 +32,17 @@
         <dxi-column caption="Foto" dataField="image" [width]="100" [allowFiltering]="false" [allowSorting]="false" cellTemplate="cellTemplate"></dxi-column>
         <dxi-column dataField="name" caption="Nombre"></dxi-column>
         <dxi-column dataField="species" caption="Especia"></dxi-column>    
+        <dxi-column dataField="class" caption="class"></dxi-column>    
+        <dxi-column [visible]="false" dataField="creator" caption="creator"></dxi-column> 
+        <dxi-column [visible]="false" dataField="dateCreated" caption="dateCreated"></dxi-column> 
+        <dxi-column [visible]="false" dataField="dateDestroyed" caption="dateDestroyed"></dxi-column> 
+        <dxi-column [visible]="false" dataField="destroyedLocation" caption="destroyedLocation"></dxi-column> 
+        <dxi-column [visible]="false" dataField="equipment" caption="equipment"></dxi-column> 
+        <dxi-column [visible]="false" dataField="eyeColor" caption="eyeColor"></dxi-column> 
+        <dxi-column [visible]="false" dataField="platingColor" caption="platingColor"></dxi-column> 
+        <dxi-column [visible]="false" dataField="sensorColor" caption="sensorColor"></dxi-column> 
+        <dxi-column [visible]="false" dataField="skinColor" caption="skinColor"></dxi-column> 
+        <dxi-column [visible]="false" dataField="wiki" caption="wiki"></dxi-column> 
         <div *dxTemplate="let data of 'cellTemplate'">
             <img [src]="data.value" />
         </div>
