@@ -1,4 +1,30 @@
-<p>PAdre****</p>
-<div>
-    <app-add-image [imagen]="mensaje"></app-add-image>
+<p>Asignación de imagenes</p>
+
+<app-add-image  (addImage)="addImage($event)"></app-add-image>
+<div class="row">       
+    <div  class="col-sm-8" >
+    <dx-data-grid id="gridContainer" [dataSource]="array_base" keyExpr="id" [showBorders]="true">
+        <dxo-editing mode="popup" [allowUpdating]="true" [useIcons]="true">
+            <dxo-popup title="Detalle" [showTitle]="true" [width]="700" [height]="525">
+            </dxo-popup>
+            <dxo-form>
+                <dxi-item itemType="group" [colCount]="2" [colSpan]="2">
+                    <dxi-item dataField="name"></dxi-item>
+                    <dxi-item dataField="species"></dxi-item>
+                    <dxi-item dataField="image" ></dxi-item>
+                
+                </dxi-item>
+            </dxo-form>
+        </dxo-editing>
+        <dxo-search-panel [visible]="true" [width]="340" placeholder="Buscar..."></dxo-search-panel>
+        <dxi-column caption="Foto" dataField="image" [width]="100" [allowFiltering]="false" [allowSorting]="false" cellTemplate="cellTemplate"></dxi-column>
+        <dxi-column dataField="name" caption="Nombre"></dxi-column>
+        <dxi-column dataField="species" caption="Especia"></dxi-column>    
+        <div *dxTemplate="let data of 'cellTemplate'">
+            <img [src]="data.value" />
+        </div>
+    </dx-data-grid>
+
+    </div>
+    
 </div>

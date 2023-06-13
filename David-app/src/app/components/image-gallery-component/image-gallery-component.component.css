@@ -1,0 +1,77 @@
+::ng-deep #gridContainer {
+    height: 550px;
+  }
+  
+  ::ng-deep .dx-row img {
+    height: 100px;
+  }
+  
+  ::ng-deep #gridContainer tr.main-row td:not(:first-child) {
+    height: 21px;
+  }
+  
+  ::ng-deep #gridContainer tr.notes-row {
+    white-space: normal;
+    vertical-align: top;
+  }
+  
+  ::ng-deep #gridContainer tr.notes-row td {
+    height: 70px;
+    color: #999;
+  }
+  
+  ::ng-deep .dark #gridContainer tr.notes-row td {
+    color: #777;
+  }
+  
+  ::ng-deep #gridContainer tbody.dx-state-hover {
+    background-color: #ebebeb;
+  }
+  
+  ::ng-deep .dark #gridContainer tbody.dx-state-hover {
+    background-color: #484848;
+  }
+  
+  ::ng-deep #gridContainer tbody.dx-state-hover tr.main-row td {
+    color: #000;
+  }
+  
+  ::ng-deep .dark #gridContainer tbody.dx-state-hover tr.main-row td {
+    color: #ccc;
+  }
+  
+  ::ng-deep #gridContainer tbody.dx-state-hover tr.notes-row td {
+    color: #888;
+  }
+  
+  .dx-list-item-content > div {
+    padding: 5px;
+    font-size: 15px;
+  }
+  
+  .options {
+    margin-top: 20px;
+    padding: 20px;
+    background: rgba(191, 191, 191, 0.15);
+  }
+  
+  .options .caption {
+    font-size: 18px;
+    font-weight: 500;
+  }
+  
+  .option {
+    margin-top: 10px;
+  }
+  
+  .option > span {
+    margin-right: 10px;
+  }
+  
+  .option > .dx-selectbox {
+    display: inline-block;
+    vertical-align: middle;
+    max-width: 350px;
+    width: 100%;
+  }
+  
