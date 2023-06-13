@@ -1,13 +1,14 @@
-<p>componente add image</p>
+<div class="row" style="margin-bottom: 15px;"> 
 <form [formGroup]="headerGroup" >
     <div class="col-sm-12 col-md-6 col-lg-6" >
         <div class="input-group prefix">
             <span>Personaje:  &nbsp;</span>        
             <input type="text" id="personaje" formControlName="name" list="dataListOptions" class="inputFullWide"
-            (change)="llenaSeleccion()" aria-describedby="personaje" placeholder="Ingresa un nombre" required>
+            (change)="llenaSeleccion()" aria-describedby="personaje" placeholder="Escribe un nombre" required>
             <datalist id="dataListOptions" style="height:50px;">
                 <option *ngFor="let post of posts" [value]="post.name"></option>
             </datalist>
         </div>
     </div> 
 </form> 
+</div>

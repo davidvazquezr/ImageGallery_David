@@ -1,4 +1,5 @@
-<p>Asignación de imagenes</p>
+
+<h2>Asignación de imagenes</h2>
 
 <app-add-image  (addImage)="addImage($event)"></app-add-image>
 <div class="row">       
@@ -14,6 +15,9 @@
                     <dxi-item dataField="species"></dxi-item>
                     <dxi-item dataField="image" ></dxi-item>
                     <dxi-item dataField="class"></dxi-item>
+                    <dxi-item dataField="id"></dxi-item>
+                    <dxi-item dataField="homeworld"></dxi-item>
+                    <dxi-item dataField="model"></dxi-item>
                     <dxi-item dataField="creator"></dxi-item>
                     <dxi-item dataField="dateCreated" ></dxi-item>
                     <dxi-item dataField="dateDestroyed"></dxi-item>
@@ -31,8 +35,11 @@
         <dxo-search-panel [visible]="true" [width]="340" placeholder="Buscar..."></dxo-search-panel>
         <dxi-column caption="Foto" dataField="image" [width]="100" [allowFiltering]="false" [allowSorting]="false" cellTemplate="cellTemplate"></dxi-column>
         <dxi-column dataField="name" caption="Nombre"></dxi-column>
-        <dxi-column dataField="species" caption="Especia"></dxi-column>    
-        <dxi-column dataField="class" caption="class"></dxi-column>    
+        <dxi-column dataField="species" caption="Especie"></dxi-column>    
+        <dxi-column dataField="class" caption="Clase"></dxi-column>    
+        <dxi-column [visible]="false" dataField="id" caption="id"></dxi-column> 
+        <dxi-column [visible]="false" dataField="homeworld" caption="homeworld"></dxi-column> 
+        <dxi-column [visible]="false" dataField="model" caption="model"></dxi-column> 
         <dxi-column [visible]="false" dataField="creator" caption="creator"></dxi-column> 
         <dxi-column [visible]="false" dataField="dateCreated" caption="dateCreated"></dxi-column> 
         <dxi-column [visible]="false" dataField="dateDestroyed" caption="dateDestroyed"></dxi-column> 
